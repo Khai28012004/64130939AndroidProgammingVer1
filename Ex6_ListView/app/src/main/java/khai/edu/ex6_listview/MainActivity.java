@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ListView listViewNNLT = findViewById(R.id.lvNNLT);
+    ListView listViewNNLT;
     ArrayList<String> dsNgonNguLT;
 
     @Override
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        listViewNNLT = findViewById(R.id.lvNNLT);
         dsNgonNguLT = new ArrayList<String>();
         dsNgonNguLT.add("Python");
         dsNgonNguLT.add("Java");
