@@ -21,7 +21,7 @@ public class ActivityCau3 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         foodList = new ArrayList<>();
-        foodList.add(new FoodItem("Pizza", "Bánh pizza phô mai", R.drawable.th));
+        foodList.add(new FoodItem("su kem", "Bánh su kem", R.drawable.img_3));
         foodList.add(new FoodItem("Sushi", "Món sushi Nhật Bản", R.drawable.img));
         foodList.add(new FoodItem("Hamburger", "Bánh mì kẹp thịt", R.drawable.img_1));
         foodList.add(new FoodItem("Phở", "Món phở truyền thống", R.drawable.img_2));

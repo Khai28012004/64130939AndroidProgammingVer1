@@ -1,24 +1,17 @@
 package khai.edu.baigk;
 
-import android.os.Bundle;
+public class FoodItem {
+    private String name;
+    private String description;
+    private int imageResId;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-public class FoodItem extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_food_item);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    public FoodItem(String name, String description, int imageResId) {
+        this.name = name;
+        this.description = description;
+        this.imageResId = imageResId;
     }
+
+    public String getName() { return name; }
+    public String getDescription() { return description; }
+    public int getImageResId() { return imageResId; }
 }

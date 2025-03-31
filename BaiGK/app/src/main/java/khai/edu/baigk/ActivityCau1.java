@@ -15,8 +15,9 @@ public class ActivityCau1 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_cau1);
     }
+
     //bo lang nghe va xu ly cong o day
-    public void XuLyCong(View view){
+    public void XuLyCong(View view) {
         EditText editTextA = (EditText) findViewById(R.id.edtA);
         EditText editTextB = (EditText) findViewById(R.id.edtB);
         EditText editTextKQ = (EditText) findViewById(R.id.edtKQ);
@@ -32,3 +33,4 @@ public class ActivityCau1 extends AppCompatActivity {
         //hien thi ket qua ra man hinh
         editTextKQ.setText(strTong);
     }
+}

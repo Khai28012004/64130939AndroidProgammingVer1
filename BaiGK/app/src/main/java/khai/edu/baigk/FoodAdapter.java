@@ -1,24 +1,52 @@
 package khai.edu.baigk;
 
-import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class FoodAdapter extends AppCompatActivity {
+import java.util.List;
+
+public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
+    private List<FoodItem> foodList;
+
+    public FoodAdapter(List<FoodItem> foodList) {
+        this.foodList = foodList;
+    }
+
+    @NonNull
+    @Override
+    public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, parent, false);
+        return new FoodViewHolder(view);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_food_adapter);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    public void onBindViewHolder(@NonNull FoodViewHolder holder, int position) {
+        FoodItem foodItem = foodList.get(position);
+        holder.foodName.setText(foodItem.getName());
+        holder.foodDescription.setText(foodItem.getDescription());
+        holder.foodImage.setImageResource(foodItem.getImageResId());
+    }
+
+    @Override
+    public int getItemCount() {
+        return foodList.size();
+    }
+
+    static class FoodViewHolder extends RecyclerView.ViewHolder {
+        TextView foodName, foodDescription;
+        ImageView foodImage;
+
+        public FoodViewHolder(@NonNull View itemView) {
+            super(itemView);
+            foodName = itemView.findViewById(R.id.foodName);
+            foodDescription = itemView.findViewById(R.id.foodDescription);
+            foodImage = itemView.findViewById(R.id.foodImage);
+        }
     }
 }
