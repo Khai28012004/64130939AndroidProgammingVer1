@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logontu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/logo_description"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tính điểm trung bình môn học"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm QT (20%)"
+        android:textSize="16sp"/>
+    <EditText
+        android:id="@+id/edtDiemQT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm GK (30%)"
+        android:textSize="16sp"/>
+    <EditText
+        android:id="@+id/edtDiemGK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm CK (50%)"
+        android:textSize="16sp"/>
+    <EditText
+        android:id="@+id/edtDiemCK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnTinhDiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tính điểm TB"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtKetQua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kết quả"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+</LinearLayout>
