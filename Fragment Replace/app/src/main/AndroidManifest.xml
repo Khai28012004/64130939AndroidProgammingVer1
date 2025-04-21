@@ -10,13 +10,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FragmentStatic"
+        android:theme="@style/Theme.FragmentReplace"
         tools:targetApi="31">
         <activity
-            android:name=".FooterFragment"
+            android:name=".cau3"
             android:exported="false" />
         <activity
-            android:name=".ContentFragment"
+            android:name=".cau2"
+            android:exported="false" />
+        <activity
+            android:name=".cau1"
+            android:exported="false" />
+        <activity
+            android:name=".Footer"
+            android:exported="false" />
+        <activity
+            android:name=".Content"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
